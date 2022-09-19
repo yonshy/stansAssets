@@ -1,1 +1,0 @@
-# stansAssets readme
