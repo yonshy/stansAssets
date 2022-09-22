@@ -33,19 +33,19 @@
   display: block;
 }
 
-._icon-location:before {
+._icon-logo:before {
   content: "\e900";
 }
 
-._icon-logo:before {
+._icon-mail:before {
   content: "\e901";
 }
 
-._icon-mail:before {
+._icon-phone:before {
   content: "\e902";
 }
 
-._icon-phone:before {
+._icon-share:before {
   content: "\e903";
 }
 
@@ -53,8 +53,20 @@
   content: "\e904";
 }
 
+._icon-telegram:before {
+  content: "\e905";
+}
+
+._icon-twitter:before {
+  content: "\e906";
+}
+
 ._icon-unity:before {
   content: "\e907";
+}
+
+._icon-viber:before {
+  content: "\e908";
 }
 
 ._icon-whatsapp:before {
@@ -65,36 +77,36 @@
   content: "\e90a";
 }
 
-._icon-facebook:before {
+._icon-clock:before {
   content: "\e90b";
 }
 
-._icon-faqs__img:before {
+._icon-eye:before {
   content: "\e90c";
 }
 
-._icon-github:before {
+._icon-facebook:before {
   content: "\e90d";
 }
 
-._icon-in:before {
+._icon-faqs__img:before {
   content: "\e90e";
 }
 
-._icon-instagram:before {
+._icon-github:before {
   content: "\e90f";
 }
 
-._icon-viber:before {
-  content: "\e908";
+._icon-in:before {
+  content: "\e910";
 }
 
-._icon-telegram:before {
-  content: "\e905";
+._icon-instgram:before {
+  content: "\e911";
 }
 
-._icon-twitter:before {
-  content: "\e906";
+._icon-location:before {
+  content: "\e912";
 }
 
 * {
@@ -665,6 +677,7 @@ body::after {
   top: 60px;
   max-width: 50.5rem;
   pointer-events: none;
+  z-index: 1;
 }
 
 .nav-drop__items {
@@ -695,7 +708,6 @@ body::after {
 
 .header-home__item:hover .nav-drop {
   opacity: 1;
-  visibility: visible;
   pointer-events: all;
 }
 
@@ -1179,7 +1191,7 @@ body::after {
   top: 60px;
   max-width: 50.5rem;
   pointer-events: none;
-  visibility: hidden;
+  z-index: 1;
 }
 
 .nav-drop__items {
@@ -1211,7 +1223,6 @@ body::after {
 .header__item:hover .nav-drop {
   opacity: 1;
   pointer-events: all;
-  visibility: visible;
 }
 
 .icon-header__menu {
@@ -2315,6 +2326,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 13% 0;
 }
 
 .portfolio__wrapper {
@@ -2770,6 +2782,8 @@ body {
 
 .article__img-wrapper {
   margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .article__img {
@@ -2943,6 +2957,10 @@ body {
 
 .article-swiper .article__article-top {
   margin: 16px;
+}
+
+.article-swiper .blog__views {
+  margin-right: 0;
 }
 
 .article-swiper .article__author {
@@ -3595,7 +3613,7 @@ body {
 
 .technologies__wrapper {
   max-width: 56.125rem;
-  margin: 0 auto;
+  margin: 50px auto;
   text-align: center;
 }
 
@@ -3733,10 +3751,6 @@ body {
   min-height: 1.5rem;
 }
 
-.reviews__star-wrapper {
-  margin-right: none;
-}
-
 .reviews__number-reviwes {
   display: inline-block;
   font-weight: 400;
@@ -3770,6 +3784,10 @@ body {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.technologies .blog__stars {
+  margin-right: 0;
 }
 
 .services__title {
@@ -3853,6 +3871,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 14% 0;
 }
 
 @supports (margin-bottom: clamp( 3.6875rem , 3.2762850467rem  +  2.0560747664vw , 5.0625rem )) {
@@ -3881,14 +3900,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 0;
+  margin-bottom: 50px;
 }
 
 .blockquote__title {
   font-family: "Harabara", sans-serif;
   color: white;
   font-weight: 700;
-  margin-top: 13.25rem;
   letter-spacing: 0.06em;
   color: white;
   margin-bottom: 1rem;
@@ -3976,7 +3994,6 @@ body {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   padding: 0.3125rem 0.3125rem 0.3125rem 0.3125rem;
-  margin-bottom: 15rem;
 }
 
 @supports (padding-bottom: clamp( 0.625rem , -1.6179906542rem  +  11.214953271vw , 8.125rem )) {
@@ -4961,6 +4978,22 @@ body {
   }
 }
 
+@media (max-width: 782px) {
+  .no-webp .blockquote{
+    background-image: url(../img/images/mobile/blockquote-mobile-bg.jpg); }
+  .blockquote {
+    padding: 23% 0;
+  }
+
+  .blockquote__title {
+    margin-bottom: 0.75rem;
+  }
+
+  .blockquote__text {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width: 771px) {
   .about-us .services__text span {
     display: inline;
@@ -5144,25 +5177,6 @@ body {
 @media (max-width: 515px) {
   .no-webp .st-blockquote{
     background-image: url(img/images/mobile/blockquote-mobile-bg.jpg); }
-
-  .no-webp .blockquote{
-    background-image: url(../img/images/mobile/blockquote-mobile-bg.jpg); }
-
-  .blockquote__title {
-    margin-bottom: 0.75rem;
-  }
-
-  .blockquote__text {
-    margin-bottom: 1.5rem;
-  }
-
-  .blockquote__link {
-    margin-bottom: 7.0625rem;
-  }
-
-  .blockquote__title {
-    margin-top: 5.0625rem;
-  }
 }
 
 @media (max-width: 501px) {
@@ -5429,10 +5443,6 @@ body {
             transform: translateY(-175px);
     margin-bottom: -175px;
   }
-
-  .blockquote-png {
-    background-image: url(../img/images/mobile/products__blockquote-mobile.svg);
-  }
 }
 
 @media (max-width: 50.0625em) {
@@ -5628,6 +5638,14 @@ body {
 
   .st-text__text + .st-text__text {
     margin-top: 1.5625rem;
+  }
+}
+
+@media (max-width: 48.875em) {
+  .no-webp .blockquote-png{
+    background-image: url(../img/images/mobile/products__blockquote-mobile.png); }
+  .blockquote-png {
+    padding: 23% 0;
   }
 }
 
@@ -5999,6 +6017,10 @@ body {
 
 .webp .blockquote{ background-image: url(../img/images/blockquote-bg.webp); }
 
+@media (max-width: 782px){
+  .webp .blockquote{ background-image: url(../img/images/mobile/blockquote-mobile-bg.webp); }
+}
+
 @media (max-width: 601px){
   .webp .header__slide:nth-child(1){ background-image: url(../img/content-img/mobile/header__slider-mobile-img1.webp); }
 }
@@ -6015,10 +6037,6 @@ body {
   .webp .st-blockquote{ background-image: url(img/images/mobile/blockquote-mobile-bg.webp); }
 }
 
-@media (max-width: 515px){
-  .webp .blockquote{ background-image: url(../img/images/mobile/blockquote-mobile-bg.webp); }
-}
-
 @media (max-width: 65.625em){
   .webp .footer--background-color .footer{ background-image: url(../img/images/mobile/footer-mobile-bg.webp); }
 }
@@ -6029,6 +6047,10 @@ body {
 
 @media (max-width: 54.3125em){
   .webp .products__bg{ background-image: url(../img/images/mobile/card-products-bg-mobile.webp); }
+}
+
+@media (max-width: 48.875em){
+  .webp .blockquote-png{ background-image: url(../img/images/mobile/products__blockquote-mobile.webp); }
 }
 
 @media (max-width: 34.0625em){

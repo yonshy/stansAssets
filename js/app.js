@@ -4348,31 +4348,25 @@
         let arrow = document.querySelectorAll(".header__arrow");
         navDrop[0].addEventListener("mouseover", (function() {
             link[0].style.color = "#0aa3e3";
-            this.addEventListener("mouseout", (function() {
-                link[0].style.color = "";
-            }));
             arrow[0].style.color = "#0aa3e3";
-            this.addEventListener("mouseout", (function() {
+            navDrop[0].addEventListener("mouseout", (function() {
+                link[0].style.color = "";
                 arrow[0].style.color = "";
             }));
         }));
         navDrop[1].addEventListener("mouseover", (function() {
             link[1].style.color = "#0aa3e3";
-            this.addEventListener("mouseout", (function() {
-                link[1].style.color = "";
-            }));
             arrow[1].style.color = "#0aa3e3";
             this.addEventListener("mouseout", (function() {
+                link[1].style.color = "";
                 arrow[1].style.color = "";
             }));
         }));
         navDrop[2].addEventListener("mouseover", (function() {
             link[5].style.color = "#0aa3e3";
-            this.addEventListener("mouseout", (function() {
-                link[5].style.color = "";
-            }));
             arrow[2].style.color = "#0aa3e3";
             this.addEventListener("mouseout", (function() {
+                link[5].style.color = "";
                 arrow[2].style.color = "";
             }));
         }));
@@ -4382,35 +4376,33 @@
         let arrowHome = document.querySelectorAll(".header-home__arrow");
         navDrop[0].addEventListener("mouseover", (function() {
             linkHome[0].style.color = "#0aa3e3";
-            this.addEventListener("mouseout", (function() {
-                linkHome[0].style.color = "";
-            }));
             arrowHome[0].style.color = "#0aa3e3";
             this.addEventListener("mouseout", (function() {
+                linkHome[0].style.color = "";
                 arrowHome[0].style.color = "";
             }));
         }));
         navDrop[1].addEventListener("mouseover", (function() {
             linkHome[1].style.color = "#0aa3e3";
-            this.addEventListener("mouseout", (function() {
-                linkHome[1].style.color = "";
-            }));
             arrowHome[1].style.color = "#0aa3e3";
             this.addEventListener("mouseout", (function() {
+                linkHome[1].style.color = "";
                 arrowHome[1].style.color = "";
             }));
         }));
         navDrop[2].addEventListener("mouseover", (function() {
             linkHome[5].style.color = "#0aa3e3";
-            this.addEventListener("mouseout", (function() {
-                linkHome[5].style.color = "";
-            }));
             arrowHome[2].style.color = "#0aa3e3";
             this.addEventListener("mouseout", (function() {
+                linkHome[5].style.color = "";
                 arrowHome[2].style.color = "";
             }));
         }));
     }
+    let blogItem = "";
+    const blogWrapper = document.querySelector(".blog__wrapper");
+    for (let index = 0; index < 50; index++) blogItem += `<div class="blog__box">\n<a href="article.html">\n   <div class="blog__img-wrapper">\n      <img class="blog__img" src="img/content-img/blog-post-img1.jpg" alt="img one">\n   </div>\n</a>\n\n<div class="blog__text-wrapper">\n   <div class="blog__stars-inner">\n      <div class="blog__stars">\n         <form action="#" class="form form_margin">\n            <div class="form__item">\n               <div class="rating rating_set">\n                  <div class="rating__body">\n                     <div class="rating__active"></div>\n                     <div class="rating__items">\n                        <input type="radio" class="rating__item" value="1" name="rating">\n                        <input type="radio" class="rating__item" value="2" name="rating">\n                        <input type="radio" class="rating__item" value="3" name="rating">\n                        <input type="radio" class="rating__item" value="4" name="rating">\n                        <input type="radio" class="rating__item" value="5" name="rating">\n                     </div>\n                  </div>\n               </div>\n            </div>\n         </form>\n      </div>\n      <div class="blog__min-read">\n         <span class="blog__icon _icon-clock"></span>\n         <p class="blog__min-read-text">6 min read</p>\n      </div>\n      <div class="blog__views">\n         <span class="blog__icon _icon-eye"></span>\n         <p class="blog__views-text">543 views</p>\n      </div>\n   </div>\n   <a class="blog__text-inner" href="article.html">\n      <h3 class="blog__text-title" uppercase">${index + 1} Lorem ipsum dolor sit amet, consectetur adipiscing\n         elit.</h3>\n      <p class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n         sodales eleifend dolor vel cursus. Fusce in ligula ut leo eleifend lobortis fringilla non\n         elit. Vivamus mollis, odio ac finibus rutrum...</p>\n   </a>\n   <div class="blog__author">\n      <a href="author.html">\n         <img src="img/content-img/blog-author-img.jpg" alt="Author"\n            class="blog__author-img"></img>\n         <p class="blog__author-name">By Andrew Williams</p>\n         <span>|</span>\n         <div class="blog__author-data">\n            <p>February 24, 2021</p>\n         </div>\n      </a>\n   </div>\n</div>\n</div>`;
+    if (blogWrapper) blogWrapper.innerHTML = blogItem;
     const ratings = document.querySelectorAll(".rating");
     const ratingNumber = document.querySelector(".reviews__number");
     if (ratings.length > 0) initRatings();
@@ -4482,9 +4474,10 @@
     const ulTag = document.querySelector(".ulTag");
     const arrowLeft = document.querySelector(".arrowLeft");
     const arrowRight = document.querySelector(".arrowRight");
-    if (ulTag) {
-        const blogItemsArr = [];
+    const blogOneItem = document.querySelector(".blog__box");
+    if (ulTag && blogOneItem) {
         const blogItems = document.querySelectorAll(".blog__box");
+        const blogItemsArr = [];
         blogItems.forEach((box => blogItemsArr.push(box)));
         const notsOnPage = 5;
         let activePage = 0;
@@ -4554,14 +4547,6 @@
     if (lshowSelectFile) document.getElementById("selectfile").onchange = function() {
         lshowSelectFile.setAttribute("value", this.value);
     };
-    const blogAuthorLinks = document.querySelectorAll(".blog__author a");
-    blogAuthorLinks.forEach((el => {
-        el.href = "author.html";
-    }));
-    const blogTextInnerLinks = document.querySelectorAll(".blog__text-inner");
-    blogTextInnerLinks.forEach((el => {
-        el.href = "article.html";
-    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
