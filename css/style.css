@@ -1721,6 +1721,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 13% 0;
 }
 
 @supports (margin-top: clamp( 6.25rem , 4.0277777778rem  +  11.1111111111vw , 9.375rem )) {
@@ -1793,14 +1794,17 @@ body {
   margin-top: 2.1875rem;
 }
 
-.no-webp .st-slider{
+.no-webp .st-main .st-slider{
   background-image: url(../img/images/st-slider-bg.jpg); }
 
-.st-slider {
-  margin-bottom: 1.25rem;
+.st-main .st-slider {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.st-slider {
+  margin-bottom: 1.25rem;
 }
 
 @supports (padding-top: clamp( 3.75rem , 2.0677570093rem  +  8.4112149533vw , 9.375rem )) {
@@ -5174,11 +5178,6 @@ body {
   }
 }
 
-@media (max-width: 515px) {
-  .no-webp .st-blockquote{
-    background-image: url(img/images/mobile/blockquote-mobile-bg.jpg); }
-}
-
 @media (max-width: 501px) {
   .header-home__menu .header-home__contact-link {
     display: none;
@@ -5642,8 +5641,15 @@ body {
 }
 
 @media (max-width: 48.875em) {
+  .no-webp .st-blockquote{
+    background-image: url(img/images/mobile/blockquote-mobile-bg.jpg); }
+  .st-blockquote {
+    padding: 23% 0;
+  }
+
   .no-webp .blockquote-png{
     background-image: url(../img/images/mobile/products__blockquote-mobile.png); }
+
   .blockquote-png {
     padding: 23% 0;
   }
@@ -5963,7 +5969,7 @@ body {
 
 .webp .st-blockquote{ background-image: url(../img/images/blockquote-bg.webp); }
 
-.webp .st-slider{ background-image: url(../img/images/st-slider-bg.webp); }
+.webp .st-main .st-slider{ background-image: url(../img/images/st-slider-bg.webp); }
 
 .webp .st-slider__slide:nth-child(1) .st-slider__slide-bg{ background-image: url(../img/content-img/st-slider__slide-bg-1.webp); }
 
@@ -6033,10 +6039,6 @@ body {
   .webp .header__slide:nth-child(3){ background-image: url(../img/content-img/mobile/header__slider-mobile-img3.webp); }
 }
 
-@media (max-width: 515px){
-  .webp .st-blockquote{ background-image: url(img/images/mobile/blockquote-mobile-bg.webp); }
-}
-
 @media (max-width: 65.625em){
   .webp .footer--background-color .footer{ background-image: url(../img/images/mobile/footer-mobile-bg.webp); }
 }
@@ -6047,6 +6049,10 @@ body {
 
 @media (max-width: 54.3125em){
   .webp .products__bg{ background-image: url(../img/images/mobile/card-products-bg-mobile.webp); }
+}
+
+@media (max-width: 48.875em){
+  .webp .st-blockquote{ background-image: url(img/images/mobile/blockquote-mobile-bg.webp); }
 }
 
 @media (max-width: 48.875em){
