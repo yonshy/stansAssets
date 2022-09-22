@@ -1794,10 +1794,10 @@ body {
   margin-top: 2.1875rem;
 }
 
-.no-webp .st-main .st-slider{
+.no-webp #st-main .st-slider{
   background-image: url(../img/images/st-slider-bg.jpg); }
 
-.st-main .st-slider {
+#st-main .st-slider {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5969,7 +5969,7 @@ body {
 
 .webp .st-blockquote{ background-image: url(../img/images/blockquote-bg.webp); }
 
-.webp .st-main .st-slider{ background-image: url(../img/images/st-slider-bg.webp); }
+.webp #st-main .st-slider{ background-image: url(../img/images/st-slider-bg.webp); }
 
 .webp .st-slider__slide:nth-child(1) .st-slider__slide-bg{ background-image: url(../img/content-img/st-slider__slide-bg-1.webp); }
 
