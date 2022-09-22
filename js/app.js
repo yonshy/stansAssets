@@ -4207,10 +4207,10 @@
                 speed: 800,
                 spaceBetween: 60,
                 slidesPerView: "auto",
-                loop: true,
                 slideToClickedSlide: true,
                 centeredSlides: true,
                 watchOverflow: true,
+                initialSlide: 1,
                 navigation: {
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next"
