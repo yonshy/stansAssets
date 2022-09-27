@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;
 
 400;500;600;700&family=Noto+Sans:wght@800&family=Open+Sans:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap);
 @charset "UTF-8";
 @font-face {
   font-family: icons;
@@ -3577,6 +3578,183 @@ body {
   gap: 0;
 }
 
+.no-webp .bg-img{
+  background-image: url(../img/inex-img.jpg); }
+
+.bg-img {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  width: 100%;
+  color: #EBE8B0;
+  font-family: Montserrat;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+.index h1 {
+  color: #EBE8B0;
+  font-size: 2.5rem;
+  margin: 0px 0px 1.25rem 0px;
+}
+
+.index h2 {
+  color: #EBE8B0;
+  font-size: 1.25rem;
+  margin: 0px 0px 1rem 0px;
+}
+
+.index__rootpage-text {
+  color: #EBE8B0;
+}
+
+.index__rootpage-li a {
+  color: #ebe691;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.index__rootpage-li a:hover {
+  color: #aaa768;
+}
+
+.index__rootpage-li a:visited {
+  color: #aaa768;
+}
+
+.index__rootpage-li a:hover:visited {
+  color: #ebe691;
+}
+
+.index__wrapper {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+}
+
+.index__rootpage {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.index__rootpage-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.index__rootpage-ul {
+  margin-left: 10px;
+}
+
+.index__rootpage-li {
+  margin-top: 10px;
+  list-style: circle;
+}
+
+.index__ul {
+  margin-left: 10px;
+}
+
+.index__li {
+  margin-top: 10px;
+  list-style: disc;
+}
+
+.index__rootpage-contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.index__social-text {
+  display: inline;
+}
+
+.index__social {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.index__icon::before {
+  font-size: 30px;
+  color: #ebe691;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.index__icon:visited::before {
+  color: #aaa768;
+}
+
+.index__icon:hover:visited::before {
+  color: #ebe691;
+}
+
+.index__icon:hover:before {
+  color: #aaa768;
+}
+
+.index__sicial-item {
+  list-style: none;
+}
+
+.index__rootpage-contacts {
+  border-radius: 200px;
+  padding: 20px 65px;
+  line-height: 140%;
+  background-color: #194484;
+}
+
+.index__contscts-p a {
+  white-space: nowrap;
+}
+
 .title-h2 {
   font-family: "Harabara", sans-serif;
   font-weight: 700;
@@ -5047,6 +5225,23 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .index h1 {
+    font-size: 1.85rem;
+    margin: 0px 0px 1.25rem 0px;
+  }
+
+  .index h2 {
+    font-size: 1.125rem;
+    margin: 0px 0px 1rem 0px;
+  }
+
+  .index__rootpage-contacts {
+    border-radius: 40px;
+    padding: 20px;
+  }
+}
+
 @media (max-width: 720px) {
   .partners__wrapper {
     -ms-grid-columns: 1fr 1fr;
@@ -6020,6 +6215,8 @@ body {
 .webp #about-us__project{ background-image: url(../img/images/about-us__project-bg.webp); }
 
 .webp .contact-us__bg-img{ background-image: url(../img/images/contact-us__bg-img.webp); }
+
+.webp .bg-img{ background-image: url(../img/inex-img.webp); }
 
 .webp .blockquote{ background-image: url(../img/images/blockquote-bg.webp); }
 
